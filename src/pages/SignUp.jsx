@@ -9,6 +9,7 @@ import { setDoc ,doc , serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibilityIcon.svg";
+import { toast } from "react-toastify";
 
 function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
@@ -54,7 +55,7 @@ function SignUp() {
       navigate('/')
     
     } catch (error) {
-      console.log(error);
+      toast.error("Something went wrong with registration")
     }
   };
 
@@ -106,7 +107,7 @@ function SignUp() {
           </Link>
 
           <div className="signUpBar">
-            <p className="signUpText">Sign Un</p>
+            <p className="signUpText">Sign Up</p>
             <button className="signUpButton">
               <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
             </button>
