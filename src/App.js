@@ -13,6 +13,7 @@ import Category from "./pages/Category";
 import CreateListing from "./pages/CreateListing";
 import EditListing from "./pages/EditListing";
 import Contact from "./pages/Contact";
+import Listing from "./pages/Listing";
 
 function App() {
   return (
